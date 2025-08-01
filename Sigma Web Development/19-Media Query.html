@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        @media only screen and (min-width: 10000PX) {
+
+            /* Base styles (for all screen sizes, or mobile-first) */
+            :root {
+                --color1-1: rgb(211, 255, 207);
+                /* Light green */
+                --color1-2: rgb(181, 255, 174);
+                /* Slightly darker green */
+                --color1-3: rgb(84, 135, 230);
+                /* Blue */
+                --color1-4: rgb(0, 86, 97);
+                /* Dark teal */
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                /* Recommended font */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                /* Ensures padding/border are included in element's total width/height */
+            }
+
+            /* Navigation - General (Mobile-first approach) */
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                /* Stack items vertically on small screens */
+                align-items: center;
+                /* Center items horizontally */
+                gap: 10px;
+                /* Space between nav items */
+            }
+
+            nav ul li {
+                list-style: none;
+                /* Remove position: relative and fixed 'left' values for better responsiveness */
+                font-size: 1.2rem;
+                /* Use rem for scalable font sizes */
+                text-align: center;
+                width: 100%;
+                /* Make list items take full width */
+            }
+
+            /* Adjust font size for the second nav item if it's a special heading */
+            nav ul li:nth-child(2) {
+                font-size: 1.8rem;
+                /* Smaller than 50px for mobile */
+                /* Remove fixed left positioning */
+            }
+
+            /* Main Body - General (Mobile-first approach) */
+            .mainbody {
+                box-shadow: 1px 1px 20px 5px rgba(128, 128, 128, 0.5);
+                /* Lighter shadow for subtlety */
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                /* Lighter border */
+                border-radius: 12px;
+                width: 90vw;
+                /* Take up most of the screen width */
+                height: auto;
+                /* Let content define height */
+                min-height: 60vh;
+                /* Ensure a minimum height */
+                margin: 3vh auto 0 auto;
+                /* Center horizontally, add top margin */
+                overflow: hidden;
+                background-color: var(--color1-1);
+                transition: all 0.3s ease-in-out;
+                /* Smooth transition for hover effects */
+            }
+
+            .mainbody:hover {
+                box-shadow: 1px 1px 30px 8px rgba(128, 128, 128, 0.7);
+                /* Slightly stronger shadow on hover */
+                /* No need to adjust top/left for hover if using margin: auto for centering */
+                background-color: var(--color1-2);
+                transform: translateY(-2px);
+                /* Subtle lift effect */
+            }
+
+            /* Image inside mainbody */
+            .mainbody img {
+                /* Targeting img directly inside .mainbody */
+                width: calc(100% - 1vw);
+                /* Take almost full width of parent, account for margin */
+                height: 20vh;
+                /* Keep height relative to viewport */
+                margin: 0.5vw;
+                border: none;
+                /* No border needed if parent has one */
+                border-radius: 10px;
+                object-fit: cover;
+                /* Ensures image covers area without distortion */
+                transition: all 0.3s ease-in-out;
+            }
+
+            .mainbody img:hover {
+                width: calc(100% - 0.8vw);
+                /* Slightly larger on hover */
+                height: 20.2vh;
+                /* Slightly larger on hover */
+            }
+
+            /* Buttons container */
+            .buttons {
+                display: flex;
+                justify-content: space-around;
+                /* Distribute buttons evenly */
+                padding: 1vw;
+                /* Add some padding around buttons */
+                gap: 10px;
+                /* Space between buttons */
+            }
+
+            /* General button styles */
+            .btn {
+                border-radius: 8px;
+                /* More rounded corners for buttons */
+                border: 1px solid var(--color1-3);
+                /* Add a subtle border */
+                padding: 0.8vh 2vw;
+                /* Responsive padding */
+                box-sizing: border-box;
+                cursor: pointer;
+                font-size: 0.9rem;
+                /* Responsive font size */
+                transition: all 0.3s ease-in-out;
+                background-color: var(--color1-3);
+                color: white;
+                /* Default text color for buttons */
+            }
+
+            #naturebtn,
+            #lakebtn {
+                width: auto;
+                /* Let content define width */
+                height: auto;
+                /* Let padding define height */
+                padding: 0.8vh 2vw;
+                /* Consistent padding */
+                /* Remove position: relative and right for better flow */
+            }
+
+            /* Heading and Paragraph */
+            .heading {
+                padding-left: 1vw;
+                font-size: 1.8rem;
+                /* Responsive font size */
+                margin-bottom: 0.5vh;
+                /* Reduce space below heading */
+            }
+
+            .para {
+                padding: 0 1vw;
+                /* Consistent padding */
+                width: auto;
+                /* Let content flow naturally */
+                font-size: 0.9rem;
+                /* Responsive font size */
+                line-height: 1.5;
+                /* Improve readability */
+                text-align: justify;
+                /* Justify text for better appearance */
+            }
+
+            /* Read More Button */
+            #readbtn {
+                border: 1px solid var(--color1-3);
+                border-radius: 20px;
+                width: 30vw;
+                /* Larger width for mobile */
+                height: 5vh;
+                /* Larger height for mobile */
+                display: block;
+                /* Make it a block element to center with margin auto */
+                margin: 2vh auto;
+                /* Center horizontally, add vertical margin */
+                background-color: var(--color1-3);
+                color: white;
+                font-size: 1rem;
+                position: static;
+                /* Remove absolute positioning for better flow */
+                transform: none;
+                /* Remove any previous transforms */
+                top: auto;
+                /* Reset top */
+                left: auto;
+                /* Reset left */
+            }
+
+            #readbtn:hover {
+                background-color: var(--color1-4);
+                color: white;
+                width: 32vw;
+                /* Slightly larger on hover */
+                height: 5.5vh;
+                /* Slightly larger on hover */
+                transform: translateY(-2px);
+                /* Subtle lift effect */
+            }
+
+            #naturebtn:hover,
+            #lakebtn:hover {
+                background-color: var(--color1-4);
+                color: white;
+                transform: scale(1.05);
+                /* Subtle scale effect */
+            }
+        }
+        @media only screen and (min-width: 456px) {
+    :root {
+        --color1-1: rgb(211, 255, 207);
+        --color1-2: rgb(181, 255, 174);
+        --color1-3: rgb(84, 135, 230);
+        --color1-4: rgb(0, 86, 97);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li:nth-child(1) {
+        left: 0;
+    }
+
+    nav ul li:nth-child(2) {
+        font-size: 50px;
+    }
+
+    nav ul li:nth-child(3) {
+        position: absolute;
+        right: 0;
+    }
+
+    .mainbody {
+        box-shadow: 1px 1px 100px 15px gray;
+        border: 1px solid;
+        border-radius: 12px;
+        width: 20vw;
+        height: 60vh;
+        position: relative;
+        top: 15vh;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: var(--color1-1);
+        transition: all 0.3s ease;
+    }
+
+    .mainbody:hover {
+        box-shadow: 1px 1px 100px 15px gray;
+        top: 15.2vh;
+        transform: translateX(-49.5%);
+        background-color: var(--color1-2);
+    }
+
+    div img {
+        width: 95%;
+        height: 20vh;
+        margin: 2.5%;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    div img:hover {
+        width: 96%;
+        height: 20.5vh;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 0.5vw;
+        padding: 0 1vw;
+    }
+
+    .btn {
+        border-radius: 2px;
+        padding: 0.5vh 1vw;
+        box-sizing: border-box;
+        border: none;
+    }
+
+    #naturebtn {
+        border-radius: 10px;
+        border: 0.5px solid;
+        background-color: var(--color1-3);
+        width: 4vw;
+        height: 2vh;
+        transition: all 0.3s ease;
+    }
+
+    #lakebtn {
+        border-radius: 10px;
+        border: 0.5px solid;
+        background-color: var(--color1-3);
+        width: 3.5vw;
+        height: 2vh;
+        transition: all 0.3s ease;
+    }
+
+    .heading {
+        padding-left: 1vw;
+        font-size: 40px;
+    }
+
+    .para {
+        padding-left: 1vw;
+        width: 95%;
+    }
+
+    #readbtn {
+        border: 1px solid;
+        border-radius: 20px;
+        width: 7vw;
+        height: 4vh;
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color1-3);
+        transition: all 0.3s ease;
+    }
+
+    #readbtn:hover {
+        background-color: var(--color1-4);
+        color: white;
+        width: 7.5vw;
+        height: 4.5vh;
+    }
+
+    #naturebtn:hover {
+        background-color: var(--color1-4);
+        color: white;
+        width: 4.2vw;
+        height: 2.6vh;
+    }
+
+    #lakebtn:hover {
+        background-color: var(--color1-4);
+        color: white;
+        width: 4vw;
+        height: 2.6vh;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 455px) {
+    :root {
+        --color1-1: rgb(211, 255, 207);
+        --color1-2: rgb(181, 255, 174);
+        --color1-3: rgb(84, 135, 230);
+        --color1-4: rgb(0, 86, 97);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(3) {
+        left: 0;
+        right: 0;
+    }
+
+    nav ul li:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .mainbody {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid;
+        border-radius: 12px;
+        width: 90vw;
+        height: auto;
+        min-height: 50vh;
+        position: relative;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color1-1);
+        transition: all 0.3s ease;
+        padding: 1rem;
+    }
+
+    .mainbody:hover {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+        top: 2.2rem;
+        transform: translateX(-50%);
+        background-color: var(--color1-2);
+    }
+
+    div img {
+        width: 100%;
+        height: auto;
+        max-height: 30vh;
+        margin: 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    div img:hover {
+        transform: scale(1.02);
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .btn {
+        border-radius: 2px;
+        padding: 0.5rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    #naturebtn,
+    #lakebtn {
+        border-radius: 10px;
+        border: 0.5px solid;
+        background-color: var(--color1-3);
+        width: 30vw;
+        height: auto;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    #lakebtn {
+        position: static;
+    }
+
+    .heading {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .para {
+        padding: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #readbtn {
+        border: 1px solid;
+        border-radius: 20px;
+        width: 40vw;
+        height: auto;
+        padding: 0.5rem;
+        position: static;
+        transform: none;
+        background-color: var(--color1-3);
+        transition: all 0.3s ease;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    #readbtn:hover {
+        background-color: var(--color1-4);
+        color: white;
+        transform:Samir Kassam
+
+
+        /* Changed to 456px to avoid overlap with max-width: 455px */
+        nav ul {
+            flex-direction: row;
+            /* Back to horizontal for desktop */
+            justify-content: space-between;
+            /* Distribute items */
+            align-items: flex-start;
+            /* Align items to the start */
+        }
+
+        nav ul li:nth-child(1) {
+            position: relative;
+            left: 0vw;
+            font-size: 1.2rem;
+            /* Adjust if needed */
+        }
+
+        nav ul li:nth-child(2) {
+            position: relative;
+            left: 36vw;
+            /* Keep original desktop positioning */
+            font-size: 50px;
+            /* Original large font size */
+        }
+
+        nav ul li:nth-child(3) {
+            position: relative;
+            left: 74vw;
+            /* Keep original desktop positioning */
+            font-size: 1.2rem;
+            /* Adjust if needed */
+        }
+
+        .mainbody {
+            width: 20vw;
+            /* Original desktop width */
+            height: 60vh;
+            /* Original desktop height */
+            position: relative;
+            /* Keep relative for desktop positioning */
+            top: 15vh;
+            left: 40vw;
+            margin: 0;
+            /* Reset margin for desktop */
+        }
+
+        .mainbody:hover {
+            top: 15.2vh;
+            left: 40.2vw;
+            transform: none;
+            /* Remove mobile hover transform */
+        }
+
+        .mainbody img {
+            width: 19vw;
+            height: 20vh;
+            margin: 0.5vw;
+        }
+
+        .mainbody img:hover {
+            width: 19.1vw;
+            height: 20.1vh;
+        }
+
+        .buttons {
+            justify-content: flex-start;
+            /* Adjust button alignment for desktop */
+            padding-left: 1vw;
+            /* Original padding */
+        }
+
+        .btn {
+            padding: 0.5vh 1vw;
+            /* Smaller padding for desktop buttons */
+            font-size: 0.8rem;
+        }
+
+        #naturebtn {
+            width: 4vw;
+            height: 2vh;
+        }
+
+        #lakebtn {
+            width: 3.5vw;
+            height: 2vh;
+            right: 1.2vw;
+        }
+
+        .heading {
+            font-size: 40px;
+        }
+
+        .para {
+            width: 18.8vw;
+            font-size: 1rem;
+        }
+
+        #readbtn {
+            width: 7vw;
+            height: 4vh;
+            position: absolute;
+            /* Original absolute positioning */
+            top: 50vh;
+            left: 6vw;
+            margin: 0;
+            /* Reset margin for desktop */
+            display: block;
+            /* Keep display block */
+        }
+
+        #readbtn:hover {
+            width: 7.5vw;
+            height: 4.5vh;
+            transform: none;
+            /* Remove mobile hover transform */
+        }
+
+        #naturebtn:hover,
+        #lakebtn:hover {
+            transform: none;
+            /* Remove mobile hover transform */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Submitted to Sir Harry</li>
+            <li>Quiz 3</li>
+            <li>Dated: 13 <sup>th</sup> July 2025</li>
+        </ul>
+    </nav>
+    <div class="mainbody">
+        <div class="image">
+            <img src="img/img (4).jpg" alt="This is an image">
+        </div>
+        <div class="buttons">
+            <div class="btn">
+                <button id="naturebtn">Nature</button>
+            </div>
+            <div class="btn">
+                <button id="lakebtn">Lake</button>
+            </div>
+        </div>
+        <div>
+            <section>
+                <p class="heading">Adil Kakar</p>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, deserunt. Esse est
+                    corporis vitae
+                    voluptatibus perferendis autem, iure commodi necessitatibus ut minus non nisi voluptatem accusantium
+                    dicta blanditiis sint dolores?</p>
+            </section>
+        </div>
+        <div class="buttons">
+            <Button id="readbtn">Read More</Button>
+        </div>
+    </div>
+</body>
+
+</html>

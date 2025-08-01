@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .box{
+            background-color: aqua;
+            width:80vw;
+            height: 80vw;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20vw;
+            transition: all 10s ease-in-out 2s;
+        }
+        .box1{
+            transform: rotate(360deg) scale(-4%);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Akz</div>
+    <div class="box2"></div>
+    <div class="box4"></div>
+    <div class="box6"></div>
+</body>
+</html>

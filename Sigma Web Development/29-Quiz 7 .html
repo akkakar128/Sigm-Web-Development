@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 7</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 800px;
+        height: 500px;
+        margin: 50px;
+        border: none;
+        background-color: aqua;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+        z-index: 10;
+        position: absolute;
+        transform: translate(375px, 225px);
+        animation: bounce 5s ease-out 0s infinite alternate forwards;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translate(-375px, 225px);
+        }
+
+        3% {
+            transform: translate(-350px, 200px);
+        }
+
+        6% {
+            transform: translate(-325px, 175px);
+        }
+
+        12% {
+            transform: translate(-300px, 150px);
+        }
+
+        15% {
+            transform: translate(-275px, 125px);
+        }
+
+        18% {
+            transform: translate(-250px, 100px);
+        }
+
+        21% {
+            transform: translate(-225px, 125px);
+        }
+
+        24% {
+            transform: translate(-200px, 150px);
+        }
+
+        27% {
+            transform: translate(-175px, 175px);
+        }
+
+        30% {
+            transform: translate(-150px, 200px);
+        }
+
+        33% {
+            transform: translate(-125px, 225px);
+        }
+
+        36% {
+            transform: translate(-100px, 200px);
+        }
+
+        39% {
+            transform: translate(-75px, 175px);
+        }
+
+        42% {
+            transform: translate(-50px, 150px);
+        }
+
+        45% {
+            transform: translate(-25px, 125px);
+        }
+
+        48% {
+            transform: translate(0px, 150px);
+        }
+
+        51% {
+            transform: translate(25px, 175px);
+        }
+
+        54% {
+            transform: translate(50px, 200px);
+        }
+
+        57% {
+            transform: translate(75px, 225px);
+        }
+
+        60% {
+            transform: translate(100px, 200px);
+        }
+
+        63% {
+            transform: translate(125px, 175px);
+        }
+
+        66% {
+            transform: translate(150px, 150px);
+        }
+
+        69% {
+            transform: translate(175px, 175px);
+        }
+
+        72% {
+            transform: translate(200px, 200px);
+        }
+
+        75% {
+            transform: translate(225px, 225px);
+        }
+
+        78% {
+            transform: translate(250px, 200px);
+        }
+
+        81% {
+            transform: translate(275px, 175px);
+        }
+
+        84% {
+            transform: translate(300px, 200px);
+        }
+
+        87% {
+            transform: translate(325px, 225px);
+        }
+
+        90% {
+            transform: translate(350px, 200px);
+        }
+
+        93% {
+            transform: translate(375px, 225px);
+        }
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <div class="circle"></div>
+</body>
+
+</html>

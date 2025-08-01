@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            border: 0px solid;
+            /* transform: translateX(50%) rotate(-45deg); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            position: relative;
+            top: 20vh;
+            left: 7vw;
+            transform: skew(deg);
+            transform-origin: 20% 20%;
+            margin: 2vw;
+            width: 80vw;
+            height: 80vh;
+            z-index: 10;
+        }
+        .box:hover{
+            transform: scale(1.1) rotate(0.5turn);
+            transform-origin: 50% 50%;
+            transition: transform 1s ease-in-out;
+        }
+        .box1 {
+            border: 1px solid;
+            transform: translateX(10%) translateY(-15%) rotate(-45deg);
+            position: relative;
+            top: -30vw;
+            /* transform: skew(deg); */
+            transform-origin: 20% 20%;
+            margin: 2vw;
+            width: 10vw;
+            height: 10vw;
+        }
+        .box1:hover{
+            transform: scale(1.1) rotate(0.5turn);
+            transform-origin: 50% 30%;
+            transition: transform 1s ease-in-out;
+        }
+        
+        .box2:hover{
+            transform: scale(1.1) rotate(0.5turn);
+            transform-origin: 50% 30%;
+            transition: transform 1s ease-in-out;
+        }
+        body div:nth-child(2){
+            background-color: rgb(150, 206, 255);
+            z-index: 9;
+            border: none;
+        }
+        body div:nth-child(3){
+            background-color: rgb(161, 209, 116);
+            z-index: 8;
+            border: none;
+        }
+        body div:nth-child(4){
+            background-color: rgb(250, 140, 140);
+            z-index: 7;
+            border: none;
+        }
+        body div:nth-child(5){
+            background-color: rgb(219, 146, 226);
+            z-index: 6;
+            border: none;
+        }
+        .box2 {
+            transform: translateX(10%) translateY(-15%) rotate(-45deg);
+            position: relative;
+            top: -156vh;
+            left: 80.45%;
+            /* transform: skew(deg); */
+            transform-origin: 20% 20%;
+            margin: 2vw;
+            width: 10vw;
+            height: 10vw;
+        }
+
+        body div:nth-child(6){
+            background-color: rgb(150, 206, 255);
+            z-index: 9;
+            border: none;
+        }
+        body div:nth-child(7){
+            background-color: rgb(161, 209, 116);
+            z-index: 8;
+            border: none;
+        }
+        body div:nth-child(8){
+            background-color: rgb(250, 140, 140);
+            z-index: 7;
+            border: none;
+        }
+        body div:nth-child(9){
+            background-color: rgb(219, 146, 226);
+            z-index: 6;
+            border: none;
+        }
+        .circle{
+            margin: 30%;
+            width: 30vw;
+            height: 30vw;
+            background-color: rgb(210, 255, 86);
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            z-index: 11;
+            top: -150.5vw;
+            left: 3vw;
+            justify-content: center;
+            align-content: center;
+            font-size: 10vw;
+        }
+        .circle p{
+            align-self: center;
+        }
+        .circle:hover{
+            background-color: rgb(159, 194, 62);
+            transform: scale(1.1) rotate(720deg);
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="circle"><p>Akz</p></div>
+</body>
+
+</html>

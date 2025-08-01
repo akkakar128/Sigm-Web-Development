@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 5</title>
+    <style>
+        :root {
+            /* --color-pri: #BDAA7A;
+            --color-sec: #aa9d7b93;
+            --color-ter: rgb(0, 67, 112); */
+            --color-pri: #aeb7ab;
+            --color-sec: #acb6a98f;
+            --color-ter: #36454F;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            color: var(--color-ter);
+        }
+
+        body {
+            min-width: 100vw;
+            background-color: var(--color-sec);
+        }
+
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+
+        @media only screen and (min-width: 455px) {
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                color: var(--color-ter);
+                background-color: var(--color-pri);
+                border-bottom: 0px solid black;
+                box-sizing: border-box;
+                width: 100%;
+                height: 60px;
+            }
+
+            nav ul {
+                display: flex;
+            }
+
+            nav ul li {
+                list-style: none;
+                position: relative;
+                top: 19px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+            }
+
+            nav ul li:nth-child(1) {
+                left: 5vw;
+            }
+
+            nav ul li:nth-child(2) {
+                left: 30.33vw;
+            }
+
+            nav ul li:nth-child(3) {
+                left: 55.66vw;
+            }
+
+            nav ul li:nth-child(4) {
+                left: 83vw;
+            }
+
+            /* nav ul li a:visited {
+                color: brown;
+            } */
+
+            nav ul li a:hover {
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+            .mainbox {
+                display: flex;
+                justify-content: center;
+                border: 0px solid;
+                border-radius: 20px;
+                background-color: var(--color-pri);
+                position: relative;
+                margin: 5vh;
+                width: 80%vw;
+                height: 85vh;
+                padding: 0.5vw;
+            }
+
+            .box img {
+                border-radius: 20px;
+                width: 46vw;
+                height: 80vh;
+                margin: 0.5vw;
+            }
+
+            .box img:hover {
+                transition: all 0.5s ease-in-out;
+                transform: none;
+                width: 47vw;
+                height: 81vh;
+            }
+            .logo{
+                position: fixed;
+                top: 85vh;
+                left: 92vw;
+                background-color: none;
+                z-index: 10000;
+            }
+
+            .logo img{
+                border-radius: 50%;
+                width: 5vw;
+                height: 5vw;
+            }
+            .logo img:hover{
+                transition: all 0.5s ease-in-out;
+                transform: none;
+                width: 5.2vw;
+                height: 5.2vw;
+            }
+            .quote{
+                display: flex;
+                justify-content: center;
+                border: 0px solid;
+                border-radius: 30px;
+                background-color: var(--color-pri);
+                position: relative;
+                margin: 5vh;
+                width: 80%vw;
+                height: 25vh;
+                padding: 0.5vw;
+                box-shadow: 20px 20px 20px ;
+            }
+            .quote p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 5vw;
+                position: relative;
+                top: 5vh;
+            }
+            .quote p:hover{
+                transition: all 0.5s ease-in-out;
+                transform: none;
+                font-size: 5.5vw;
+                cursor: pointer;
+                color: white;
+                text-shadow: 10px 10px 10px black;
+            } 
+            .footer {
+                position: relative;
+                top: 0;
+                z-index: 1000;
+                color: var(--color-ter);
+                background-color: var(--color-pri);
+                border-top: 0px solid black;
+                box-sizing: border-box;
+                width: 100%;
+                height: 160px;
+            }
+
+            .footer ul {
+                display: flex;
+            }
+
+            .footer ul li {
+                list-style: none;
+                position: relative;
+                top: 70px;
+            }
+
+            .footer ul li a {
+                text-decoration: none;
+            }
+
+            .footer ul li:nth-child(1) {
+                left: 5vw;
+            }
+
+            .footer ul li:nth-child(2) {
+                left: 25.33vw;
+            }
+
+            .footer ul li:nth-child(3) {
+                left: 50.66vw;
+            }
+
+            .footer ul li:nth-child(4) {
+                left: 72vw;
+            }
+
+            /* .footer ul li a:visited {
+                color: brown;
+            } */
+
+            .footer ul li:hover {
+                color: white;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="https://www.youtube.com/">Home</a></li>
+                <li><a href="https://www.instagram.com">Shop</a></li>
+                <li><a href="https://www.google.com">Contact</a></li>
+                <li><a href="https://www.twitter.com">Follow us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="mainbox">
+            <div class="box">
+                <img src="img/img (1).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (2).jpg" alt="This is an Image">
+            </div>
+        </div>
+        <div class="quote">
+            <p>Welcome to AKZ Centrum</p>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="img/img (3).jpg" alt="This is a logo">
+    </div>
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>copyright |&copy; 2017 </li>
+                <li>Contact Us </li>
+                <li>Feedbacks</li>
+                <li>Terms And Conditions</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 6</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        animation-name: body;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+        animation: body 20s ease-in-out 0s infinite alternate-reverse forwards;
+    }
+
+    @keyframes body {
+
+        /* from{
+
+        }
+        to{
+            background-color: bisque;
+        } */
+        10% {
+            background-color: rgb(255, 255, 255);
+        }
+
+        20% {
+            background-color: rgb(223, 248, 238);
+        }
+
+        30% {
+            background-color: rgb(202, 233, 220);
+        }
+
+        40% {
+            background-color: rgb(187, 236, 216);
+        }
+
+        50% {
+            background-color: rgb(168, 230, 205);
+        }
+
+        60% {
+            background-color: rgb(153, 216, 191);
+        }
+
+        70% {
+            background-color: rgb(130, 218, 182);
+        }
+
+        80% {
+            background-color: rgb(140, 192, 171);
+        }
+
+        90% {
+            background-color: rgb(183, 228, 209);
+        }
+
+        100% {
+            background-color: rgb(223, 248, 238);
+        }
+
+    }
+
+    nav {
+        display: flex;
+        position: sticky;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        border: 0px solid;
+        width: 80%;
+        height: 10vh;
+        align-items: center;
+        justify-content: space-around;
+        /* margin: 0px 200px 0 200px; */
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5vw;
+    }
+
+    .logo p:last-child {
+        position: relative;
+        top: 1vh;
+        font-size: 0.6vw;
+    }
+
+    .logo p:first-child {
+        display: flex;
+        font-size: 1vw;
+        font-weight: 500;
+        flex-wrap: nowrap;
+    }
+
+    .nav a {
+        text-decoration: none;
+    }
+
+    .headernames {
+        position: relative;
+        left: 5vw;
+        display: flex;
+        gap: 2vw;
+        font-size: 1vw;
+    }
+
+    .headernames a:hover {
+        color: rgb(72, 151, 151);
+        font-size: 1.01em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .headerimg {
+        display: flex;
+        position: relative;
+        gap: 0.5vw;
+    }
+
+    .nav img {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .nav img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .logo img {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 0.5vw;
+    }
+
+    .logo img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .mainwords {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 8vw;
+    }
+
+    .mainwords p {
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .mainwords img {
+        width: 2vw;
+        height: 2vw;
+        position: relative;
+        top: 0.1vw;
+        left: 1vw;
+        text-align: center;
+    }
+
+    .belowmain {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10vw;
+        left: 30vw;
+        font-size: 1vw;
+        text-align: center;
+    }
+
+    .mainbutton {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 11vw;
+    }
+
+    .mainbutton button {
+        border: 0;
+        background-color: #00B8CF;
+        color: white;
+        font-size: 1vw;
+        padding: 1vw 2vw 1vw 2vw;
+        border-radius: 0.4vw;
+    }
+
+    .mainbutton button:hover {
+        background-color: #0195a8;
+        transform: scale(1.09);
+        transition: all 0.3s ease-in-out;
+        /* transform:  translate(-1%, -1%); */
+        /* transform: matrix3d(10%); */
+        /* padding: 12px 27px 12px 27px; */
+        cursor: pointer;
+    }
+
+    .subheading img {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 0.4vw;
+    }
+
+    .subheading {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 12vw;
+        right: 10vw;
+        gap: 0.4vw;
+        align-items: center;
+    }
+
+    .subheading p {
+        font-size: 0.5vw;
+        padding: 2px;
+    }
+
+    .subheading p:nth-child(2) {
+        font-size: 1.6vw;
+    }
+
+    .subheading p:nth-child(3) {
+        position: relative;
+        top: 0.2vw;
+    }
+
+    .grid {
+        display: grid;
+        justify-content: center;
+        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+        margin-bottom: 20vw;
+        top: 12.5vw;
+        left: 25vw;
+        gap: 2vw 2vw;
+    }
+
+    .gridbox {
+        display: inline;
+        justify-content: center;
+        background-color: rgb(247, 247, 247);
+        width: 18vw;
+        height: 8vw;
+        box-sizing: border-box;
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid ul {
+        list-style: none;
+    }
+
+    .gridbox ul li:first-child {
+        font-size: 1vw;
+        font-weight: 600;
+    }
+
+    .grid ul li:nth-child(2) {
+        font-size: 0.5vw;
+        margin: 0.4vw 0px 1.4vw 0px;
+    }
+
+    .gridtn {
+        display: flex;
+        justify-content: center;
+        gap: 0.6vw;
+    }
+
+    .gbtns {
+        border: 0;
+        background-color: #00B8CF;
+        color: white;
+        font-size: 0.5vw;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        border-radius: 0.3vw;
+    }
+
+    .gridtn a:last-child button {
+        background-color: #54B55D;
+    }
+
+    .gbtns:hover {
+        /* padding: 11px 21px 11px 21px; */
+        /* transform-origin: 0% 0%; */
+        background-color: #0195a8;
+        transform: translate(-2%, -2%);
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .gridtn a:last-child button:hover {
+        background-color: #499c52;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        border: 0px solid;
+        height: 7vh;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 455px) {
+        nav {
+            display: flex;
+            position: sticky;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            border: 0px solid;
+            width: 100vw;
+            height: 10vh;
+            align-items: center;
+            justify-content: space-around;
+            /* margin: 0px 200px 0 200px; */
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo p:last-child {
+            position: relative;
+            top: 5px;
+            font-size: 8px;
+        }
+
+        .logo p:first-child {
+            font-size: 2.5vw;
+            font-weight: 500;
+            flex-wrap: nowrap;
+        }
+
+        .nav a {
+            display: flex;
+            text-decoration: none;
+            font-size: 3vw;
+            margin-top: 0.3vh;
+        }
+
+        .headernames {
+            position: relative;
+            left: 2vw;
+            display: inline;
+            align-content: center;
+        }
+
+        .headernames a:hover {
+            color: rgb(72, 151, 151);
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .headerimg {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+        }
+
+        .nav img {
+            width: 3vw;
+            height: 3vw;
+            margin: 0.5vw;
+        }
+
+        .nav img:hover {
+            cursor: pointer;
+            transform: scale(1.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        .logo img {
+            width: 10vw;
+            height: 10vw;
+            border-radius: 10%;
+        }
+
+        .mainwords {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 8vw;
+        }
+
+        .mainwords p {
+            font-size: 3.5vw;
+            text-align: center;
+        }
+
+        .mainwords img {
+            width: 3vw;
+            height: 3vw;
+            position: relative;
+            top: 0.1vw;
+            left: 1vw;
+            text-align: center;
+        }
+
+        .belowmain {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 10vw;
+            left: 15vw;
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        .mainbutton {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 12vw;
+        }
+
+        .mainbutton button {
+            border: 0;
+            background-color: #00B8CF;
+            color: white;
+            font-size: 1.5vw;
+            padding: 1vw 2vw 1vw 2vw;
+            border-radius: 0.8vw;
+        }
+
+        .mainbutton button:hover {
+            background-color: #0195a8;
+            transform: scale(1.09);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            /* transform:  translate(-1%, -1%); */
+            /* transform: matrix3d(10%); */
+            /* padding: 12px 27px 12px 27px; */
+        }
+
+        .subheading img {
+            width: 4vw;
+            height: 4vw;
+            border-radius: 0.8vw;
+        }
+
+        .subheading {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 13vw;
+            right: 10vw;
+            gap: 0.4vw;
+            align-items: center;
+        }
+
+        .subheading p {
+            font-size: 0.5vw;
+            padding: 2px;
+        }
+
+        .subheading p:nth-child(2) {
+            font-size: 1.6vw;
+        }
+
+        .subheading p:nth-child(3) {
+            position: relative;
+            top: 0.2vw;
+        }
+
+        .grid {
+            display: grid;
+            justify-content: center;
+            width: 50%;
+            grid-template-columns: 1fr;
+            position: relative;
+            margin-bottom: 20vw;
+            top: 12.5vw;
+            left: 25vw;
+            gap: 2vw 2vw;
+        }
+
+        .gridbox {
+            display: inline;
+            justify-content: center;
+            background-color: rgb(247, 247, 247);
+            width: 60vw;
+            height: 25vw;
+            box-sizing: border-box;
+            text-align: center;
+            align-content: center;
+        }
+
+        .grid ul {
+            list-style: none;
+        }
+
+        .gridbox ul li:first-child {
+            font-size: 3vw;
+            font-weight: 600;
+        }
+
+        .grid ul li:nth-child(2) {
+            font-size: 1.5vw;
+            margin: 0.4vw 0px 1.4vw 0px;
+        }
+
+        .gridtn {
+            display: flex;
+            justify-content: center;
+            gap: 1vw;
+        }
+
+        .gbtns {
+            border: 0;
+            background-color: #00B8CF;
+            color: white;
+            font-size: 2vw;
+            padding: 1vw 2vw 1vw 2vw;
+            border-radius: 0.8vw;
+        }
+
+        .gridtn a:last-child button {
+            background-color: #54B55D;
+        }
+
+        .gbtns:hover {
+            /* padding: 11px 21px 11px 21px; */
+            /* transform-origin: 0% 0%; */
+            background-color: #0195a8;
+            transform: translate(-2%, -2%);
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gridtn a:last-child button:hover {
+            background-color: #499c52;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            border: 0px solid;
+            height: 7vh;
+            align-items: center;
+        }
+    }
+
+    /* nav{
+        position: sticky;
+    }
+    .nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        border: 0px solid;
+        height: 100px;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0px 200px 0 200px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo p:last-child {
+        position: relative;
+        top: 10px;
+        font-size: 10px;
+    }
+
+    .logo p:first-child {
+        font-size: 20px;
+        font-weight: 500;
+        flex-wrap: nowrap;
+    }
+
+    .nav a {
+        text-decoration: none;
+    }
+
+    .headernames {
+        position: relative;
+        left: 120px;
+        display: flex;
+        gap: 40px;
+    }
+
+    .headernames a:hover {
+        color: rgb(72, 151, 151);
+        font-size: 1.01rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .headerimg {
+        display: flex;
+        position: relative;
+        right: 50px;
+        gap: 8px;
+    }
+
+    .headerimg img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav img:hover {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        transform: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+    .logo img:hover {
+        width: 82px;
+        height: 82px;
+        cursor: pointer;
+        transform: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .mainwords {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 100px;
+    }
+
+    .mainwords p {
+        font-size: 40px;
+    }
+
+    .mainwords img {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 3px;
+        left: 15px;
+    }
+
+    .belowmain {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 130px;
+        left: 30vw;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mainbutton {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 160px;
+    }
+
+    .mainbutton button {
+        border: 0;
+        background-color: #00B8CF;
+        color: white;
+        font-size: 15px;
+        padding: 10px 25px 10px 25px;
+        border-radius: 5px;
+    }
+
+    .mainbutton button:hover {
+        background-color: #0195a8;
+        transition: all 0.3s ease-in-out;
+        padding: 12px 27px 12px 27px;
+        cursor: pointer;
+    }
+
+    .subheading img {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    .subheading {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 200px;
+        right: 200px;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .subheading p {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .subheading p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    .subheading p:nth-child(3) {
+        position: relative;
+        top: 7px;
+    }
+
+    .grid {
+        display: grid;
+        justify-content: center;
+        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+        margin-bottom: 340px;
+        top: 250px;
+        left: 25vw;
+        gap: 30px 30px;
+    }
+
+    .gridbox {
+        display: inline;
+        justify-content: center;
+        background-color: rgb(247, 247, 247);
+        width: 350px;
+        height: 150px;
+        box-sizing: border-box;
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid ul {
+        list-style: none;
+    }
+
+    .gridbox ul li:first-child {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .grid ul li:nth-child(2) {
+        font-size: 12px;
+        margin: 8px 0px 25px 0px;
+    }
+
+    .gridtn {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .gbtns {
+        border: 0;
+        background-color: #00B8CF;
+        color: white;
+        font-size: 10px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+    }
+
+    .gbtns:last-child {
+        background-color: #54B55D;
+    }
+
+    .gbtns:hover {
+        background-color: #0195a8;
+        padding: 11px 21px 11px 21px;
+        transition: all 0.3s ease-in-out;
+        transform: none;
+        cursor: pointer;
+    }
+
+    .gbtns:last-child:hover {
+        background-color: #499c52;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        border: 0px solid;
+        height: 60px;
+        align-items: center;
+    } */
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <div class="logo">
+                    <li class="logo"> <img src="img/img (1).jpg" alt=""></li>
+                    <li>
+                        <p class="logo-name">AKz Centrum</p>
+                        <p>Because You deserve it ....</p>
+                    </li>
+                </div>
+
+                <div class="headernames">
+                    <li><a href="">Prices </a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Resourse</a></li>
+                    <li><a href="">About us</a></li>
+                </div>
+
+                <div class="headerimg">
+                    <li><img src="img/wtsp.png" alt="insta png"></li>
+                    <li><img src="img/fb.png" alt="insta png"></li>
+                    <li><img src="img/email.png" alt="insta png"></li>
+                    <li><img src="img/x.png" alt="insta png"></li>
+                    <li><img src="img/Web.png" alt="insta png"></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main class="body">
+        <section class="heading">
+            <div class="mainwords">
+                <p>Download <b>AKz Centrum</b> Editor for Windows<img src="img/bowl.png" alt="logo image"></p>
+            </div>
+            <div class="belowmain">
+                <p>Download and try any Akz Centrum Editor before you buy it! This download includes the
+                    full Windows versions to the text editor.</p>
+            </div>
+            <div class="mainbutton"><button>Download Mac or Linux Version</button></div>
+        </section>
+        <section class="subheading">
+            <img src="img/img (1).jpg" alt="logo image">
+            <p>Download AKz Centrum Editor</p>
+            <p>v2025.1(released 04/09/2025) | Hofloix </p>
+        </section>
+        <div class="grid">
+            <div class="gridbox">
+                <ul>
+                    <li>English</li>
+                    <li>&nbsp;</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Dutch</li>
+                    <li>Dutch</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Germen</li>
+                    <li>Germen</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Spanish</li>
+                    <li>Spanish</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>French</li>
+                    <li>French</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Polish</li>
+                    <li>Polish</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Turkish</li>
+                    <li>Turkish</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Hindi</li>
+                    <li>Hindi</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gridbox">
+                <ul>
+                    <li>Persian</li>
+                    <li>Persian</li>
+                    <li>
+                        <div class="gridtn"><a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    32-bits</button></a>
+                            <a href="programs/Mechvibes.Setup.2.3.4.exe"><button class="gbtns">Download
+                                    64-bits</button></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        copyright |&copy; 2017
+    </footer>
+</body>
+
+</html>

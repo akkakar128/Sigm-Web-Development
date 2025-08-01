@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .img{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            box-sizing: border-box;
+            gap: 10px;
+            margin: auto;
+            padding: 20px;
+            max-width: 82vw;
+            max-height: 50vh;
+            background-image: linear-gradient(red, yellow);
+            border-radius: 5%;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        img{
+            width: 25vw;
+            height: 45vh;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 5%;
+            filter: brightness(90%) contrast(90%) invert(0%) hue-rotate(10deg) sepia(30%) grayscale(10%) drop-shadow(12px 2px 12px rgb(0, 195, 255));
+        }
+        img:first-child{
+            /* filter: blur(1px); */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="img/img.jpg" alt="img">
+        <img src="img/img (1).jpg" alt="img">
+        <img src="img/img (2).jpg" alt="img">
+    </div>
+</body>
+</html>

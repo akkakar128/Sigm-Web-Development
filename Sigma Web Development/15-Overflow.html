@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 5px 8px 5px rgb(112, 96, 96);
+        }
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    padding-right: 32vw;
+}
+        p {
+            display: inline-block;
+            display: flex;
+            box-shadow: 12px 17px 12px 9px rgb(78, 73, 73) ;
+            border: 2px solid green;
+            max-width: 80vw;
+            max-height: 70px;
+            overflow: auto scroll;
+            text-overflow: ellipsis;
+            margin: auto;
+            font-size: 1.4em;
+            padding-left: 12px;
+            text-overflow: ellipsis;
+            /* white-space: nowrap; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>List Styling</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Comtact us</li>
+            <li style="padding-right: 0px ;">About</li>
+        </ul>
+    </nav>
+    <section>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ad est, accusantium inventore error velit veritatis eveniet aspernatur pariatur aut expedita officiis tempore repellendus molestiae dolorem nesciunt, deserunt adipisci corrupti.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eligendi enim iure natus aliquid molestias officia ratione in blanditiis saepe, eaque voluptas eum nam mollitia eius modi nemo ipsa nobis!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam iure dolores, quidem dolorum molestias recusandae vitae molestiae eaque tenetur sit libero! Dolorum earum ullam corrupti exercitationem magnam hic laudantium quis.</p>
+    </section>
+</body>
+</html>

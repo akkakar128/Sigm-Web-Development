@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 1.2vw;
+        }
+        :root {
+            --color-pri: #BDAA7A;
+            --color-sec: #cebf99;
+            --color-bg: #cfc3a379;
+            --color-ter: #423208;
+            /* --color-pri: #aeb7ab;
+            --color-sec: #acb6a98f;
+            --color-ter: #36454F; */
+        }
+        .nav{
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-around; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-area: "nav nav nav nav";
+            border-bottom: 0px solid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
+            height: 6vh;
+            list-style: none;
+            background-color: var(--color-pri);
+            position: sticky;
+        }
+        .nav li a{
+            text-decoration: none;
+            color: var(--color-ter);
+        }
+        .nav li a:hover{
+            color: white;
+            transition: all 0.3s ease-in-out;
+            transition: none;
+            font-size: 1.1rem;
+        }
+        body{
+            background-color: var(--color-bg);
+            box-sizing: border-box;
+        }
+
+        .mainbox{
+            margin: 1.3vw;
+            border: 0px solid;
+            border-radius: 2vw;
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            gap: 0.5vw 0.5vw;
+            padding: 1vw;
+            background-color: var(--color-sec);
+        }
+        .box-1{
+            grid-row: 1/3;
+            grid-column: 1/3;
+        }
+        .box img{
+            width: 30vw;
+            height: 32vh;
+            border-radius: 1vw;
+        }
+        .box-1 img{
+            width: 61vw;
+            height: 63vh;
+        }
+        .box img:hover{
+            width: 30.5vw;
+            height: 32.5vh;
+            transition: all 0.3s ease-in-out;
+        }
+        .box-1 img:hover{
+            width: 61.5vw;
+            height: 63.5vh;
+        }
+        .logo{
+            position: fixed;
+            top: 82%;
+            left: 92%;
+            z-index: 1000;
+        }
+        .logo img{
+            width: 5vw;
+            height: 5vw;
+            border-radius: 50%;
+        }
+        .logo img:hover{
+            width: 5.2vw;
+            height: 5.2vw;
+        }
+        .quote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid;
+            border-radius: 30px;
+            background-color: var(--color-pri);
+            position: relative;
+            margin: 5vh;
+            width: auto;
+            height: 25vh;
+            padding: 0.5vw;
+            box-shadow: 20px 20px 20px;
+        }
+
+        .quote p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 5vw;
+        }
+
+        .quote p:hover {
+            transition: all 0.5s ease-in-out;
+            transform: none;
+            font-size: 5.5vw;
+            cursor: pointer;
+            color: white;
+            text-shadow: 10px 10px 10px black;
+        }
+        .footer{
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-around; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* justify-content: center; */
+            display: grid;
+            grid-template-areas: "foot foot foot foot";
+            border-top: 0px solid;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
+            height: 16vh;
+            list-style: none;
+            background-color: var(--color-pri);
+            position: sticky;
+        }
+        .footer li a{
+            text-decoration: none;
+            color: var(--color-ter);
+            grid-area: foot;
+        }
+        .footer li a:hover{
+            color: white;
+            transition: all 0.3s ease-in-out;
+            transition: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <ul class="nav">
+                <li><a href="https://www.youtube.com/">Home</a></li>
+                <li><a href="https://www.instagram.com">Shop</a></li>
+                <li><a href="https://www.google.com">Contact</a></li>
+                <li><a href="https://www.twitter.com">Follow us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="mainbox">
+            <div class="box">
+                <img src="img/img (1).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (2).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (3).jpg" alt="This is an Image">
+            </div>
+            <div class="box box-1">
+                <img src="img/img (4).jpg" alt="This is an Image">
+            </div>
+            <div class="box box-2">
+                <img src="img/img (5).jpg" alt="This is an Image">
+            </div>
+            <div class="box box-3">
+                <img src="img/img (6).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (7).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (1).jpg" alt="This is an Image">
+            </div>
+            <div class="box">
+                <img src="img/img (2).jpg" alt="This is an Image">
+            </div>
+            <div class="logo">
+                <img src="img/img (3).jpg" alt="This is a logo">
+            </div>
+        </div>
+    </div>
+    <div class="quote">
+        <p>Welcome to AKz Centrum</p>
+    </div>
+    <footer>
+        <div>
+            <ul class="footer">
+                <li><a href="https://www.youtube.com/">copyright |&copy; 2017</a></li>
+                <li><a href="https://www.instagram.com">Contact Us</a></li>
+                <li><a href="https://www.google.com">Feedbacks</a></li>
+                <li><a href="https://www.twitter.com">Terms And Conditions</a></li>
+            </ul>
+        </div>
+    </footer>    
+</body>
+</html>

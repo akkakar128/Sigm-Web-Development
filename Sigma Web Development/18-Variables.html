@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3</title>
+    <style>
+        :root{
+            /* --color1-1:rgb(205, 252, 236);
+            --color1-2:rgb(188, 248, 228);
+            --color1-3:rgba(252, 240, 225, 0.76);
+            --color1-4:black; */
+            /* --color1-1:rgb(248, 233, 183);
+            --color1-2:rgb(250, 230, 167);
+            --color1-3:rgb(211, 145, 255);
+            --color1-4:rgb(255, 0, 0); */
+            --color1-1:rgb(211, 255, 207);
+            --color1-2:rgb(181, 255, 174);
+            --color1-3:rgb(84, 135, 230);
+            --color1-4:rgb(0, 86, 97);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            position: relative;
+        }
+
+        nav ul li:nth-child(1) {
+            position: relative;
+            left: 0vw;
+        }
+
+        nav ul li:nth-child(2) {
+            position: relative;
+            left: 36vw;
+            font-size: 50px;
+        }
+
+        nav ul li:nth-child(3) {
+            position: relative;
+            left: 74vw;
+        }
+
+        .mainbody {
+            box-shadow: 1px 1px 100px 15px gray;
+            border: 1px solid;
+            border-radius: 12px;
+            width: 20vw;
+            height: 60vh;
+            position: relative;
+            top: 15vh;
+            left: 40vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: var(--color1-1);
+        }
+
+        .mainbody:hover {
+            box-shadow: 1px 1px 100px 15px gray;
+            border: 1px solid;
+            border-radius: 12px;
+            top: 15.2vh;
+            left: 40.2vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: var(--color1-2);
+        }
+
+        div img {
+            width: 19vw;
+            height: 20vh;
+            position: relative;
+            margin: 0.5vw;
+            border: 0px solid;
+            border-radius: 10px;
+        }
+
+        div img:hover {
+            width: 19.1vw;
+            height: 20.1vh;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .btn {
+            border-radius: 2px;
+            padding-left: 2vw;
+            box-sizing: border-box;
+            border: 0px solid;
+        }
+
+        #naturebtn {
+            border-radius: 10px;
+            border: 0.5px solid;
+            background-color: var(--color1-3);
+            width: 4vw;
+            height: 2vh;
+        }
+
+        #lakebtn {
+            border-radius: 10px;
+            border: 0.5px solid;
+            position: relative;
+            right: 1.2vw;
+            background-color: var(--color1-3);
+            width: 3.5vw;
+            height: 2vh;
+        }
+
+        .heading {
+            position: relative;
+            padding-left: 1vw;
+            font-size: 40px;
+        }
+
+        .para {
+            display: flex;
+            position: relative;
+            padding-left: 1vw;
+            width: 18.8vw;
+        }
+
+        #readbtn {
+            border: 1px solid;
+            border-radius: 20px;
+            width: 7vw;
+            height: 4vh;
+            position: absolute;
+            top: 50vh;
+            left: 6vw;
+            background-color: var(--color1-3);
+        }
+
+        #readbtn:hover {
+            background-color: var(--color1-4);
+            color: white;
+            width: 7.5vw;
+            height: 4.5vh;
+        }
+
+        /* #readbtn:visited{
+            background-color: rgb(255, 0, 0);
+            color: rgb(0, 0, 0);
+        } */
+        #naturebtn:hover {
+            background-color: var(--color1-4);
+            color: white;
+            width: 4.2vw;
+            height: 2.6vh;
+        }
+
+        #lakebtn:hover {
+            background-color:var(--color1-4);
+            color: white;
+            width: 4vw;
+            height: 2.6vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Submitted to Sir Harry</li>
+            <li>Quiz 3</li>
+            <li>Dated: 13 <sup>th</sup> July 2025</li>
+        </ul>
+    </nav>
+    <div class="mainbody">
+        <div class="image">
+            <img src="img/img (4).jpg" alt="This is an image">
+        </div>
+        <div class="buttons">
+            <div class="btn">
+                <button id="naturebtn">Nature</button>
+            </div>
+            <div class="btn">
+                <button id="lakebtn">Lake</button>
+            </div>
+        </div>
+        <div>
+            <section>
+                <p class="heading">Adil Kakar</p>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, deserunt. Esse est
+                    corporis vitae
+                    voluptatibus perferendis autem, iure commodi necessitatibus ut minus non nisi voluptatem accusantium
+                    dicta blanditiis sint dolores?</p>
+            </section>
+        </div>
+        <div class="buttons">
+            <Button id="readbtn">Read More</Button>
+        </div>
+    </div>
+</body>
+
+</html>

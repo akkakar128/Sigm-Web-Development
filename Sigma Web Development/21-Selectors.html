@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        div>.box:first-child::first-letter {
+            color: brown;
+            font-size: 5rem;
+        }
+
+        .boxes * {
+            font-size: 20px;
+        }
+
+        .box:nth-child(2)::selection {
+            color: red;
+            background-color: aqua;
+        }
+
+        .boxes::before {
+            content: "This is Dynamic Data Entering through CSS";
+            opacity: 60%;
+            font-size: small;
+        }
+
+        .boxes::after {
+            content: "This is Dynamic Data Entering through CSS";
+            opacity: 60%;
+            font-size: small;
+        }
+
+        ::selection {
+            color: rgb(255, 0, 0);
+            background-color: yellow;
+            font-size: 30px;
+        }
+        .box:nth-child(2)::first-letter{
+            color: red;
+            font-size: 70px;
+        }
+        [data-color="pri"]::first-letter{
+            color: blue;
+            font-size: 40px;
+        }
+        [data-color="pri"]::selection{
+            color: rgb(0, 255, 149);
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">Hey, This is AK Kakar</div>
+        <div class="box">I am Graphic Designer</div>
+        <div class="box">I am a Web Developer</div>
+        <div class="box">I am an IT Pprogrammer</div>
+        <div data-color="pri">This is data div</div>
+    </div>
+</body>
+
+</html>
